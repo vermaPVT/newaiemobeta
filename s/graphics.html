@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aiemo Pet Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./s.css">
+</head>
+<body>
+    <header class="py-4 bg-black sm:py-6" x-data="{expanded: false}">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between">
+            <div class="shrink-0">
+              <a
+                href="/"
+                title=""
+                class="flex"
+                style="font-size: 2rem; color: #9b83ee; font-weight: bold"
+              >
+              <img src="../logo.png" style="width: 150px; justify-self: center; object-fit: cover;">
+              </a>
+            </div>
+
+            <div class="flex md:hidden">
+              <button
+                type="button"
+                class="text-white"
+                @click="expanded = !expanded"
+                :aria-expanded="expanded"
+              >
+                <span x-show="!expanded" aria-hidden="true">
+                  <svg
+                    class="w-7 h-7"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                </span>
+
+                <span x-show="expanded" aria-hidden="true">
+                  <svg
+                    class="w-7 h-7"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <nav
+              class="hidden ml-10 mr-auto space-x-10 lg:space-x-12 md:flex md:items-center md:justify-center lg:justify-center w-full mgClass"
+            >
+              <a
+                href="/"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white active"
+              >
+                Home
+              </a>
+
+              <a
+                href="../about.html"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+              >
+                About
+              </a>
+
+              <a
+            href="../#services"
+            title=""
+            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+          >
+                Services
+              </a>
+              <a
+                href="../careers.html"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+              >
+                Careers
+              </a>
+              <a
+                href="#"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white upComing"
+              >
+                Upcoming Services&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                <div class="dropDwn dropUpcoming">
+                  <img src="https://images.pexels.com/photos/3843284/pexels-photo-3843284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                  <ul>
+                    <li>Aiemo Travel Agency</li>
+                    <li>Aiemo Catering Services</li>
+                    <li>Sell Your E-Waste</li>
+                    <li>Sell Scrap</li>
+                  </ul>
+                  <ul>
+                    <li>Aiemo Painting Services</li>
+                  </ul>
+                </div>
+              </a>
+            </nav>
+
+            <div
+              class="relative hidden md:items-center md:justify-center md:inline-flex group"
+            >
+              <div
+                class="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"
+              ></div>
+              <a
+                href="login.html"
+                title=""
+                class="relative inline-flex items-center justify-center px-6 py-2 text-base font-normal text-white bg-black border border-transparent rounded-full"
+                role="button"
+              >
+                Login
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+<script>
+    const servicedetails123 = {
+     "Logo Design": {
+            title: "Logo Design",
+            description: "Create unique and memorable logos that define your brand.",
+            link: "#",
+            src: "https://via.placeholder.com/340"
+          },
+          "Business Cards": {
+            title: "Business Cards",
+            description: "Professional and sleek business card designs.",
+            link: "#",
+            src: "https://via.placeholder.com/340"
+          },
+          "Brochure Design": {
+            title: "Brochure Design",
+            description: "Eye-catching brochures to promote your business.",
+            link: "#",
+            src: "https://via.placeholder.com/340"
+          },
+          "Social Media Graphics": {
+            title: "Social Media Graphics",
+            description: "Engaging visuals for all social media platforms.",
+            link: "#",
+            src: "https://via.placeholder.com/340"
+          },
+          "Flyer Design": {
+            title: "Flyer Design",
+            description: "Custom flyers to captivate your audience.",
+            link: "#",
+            src: "https://via.placeholder.com/340"
+          },
+          "Infographic Design": {
+            title: "Infographic Design",
+            description: "Simplify complex data with stunning infographics.",
+            link: "#",
+            src: "https://via.placeholder.com/340"
+          },
+          "Poster Design": {
+            title: "Poster Design",
+            description: "High-impact posters for events and campaigns.",
+            link: "#",
+            src: "https://via.placeholder.com/340"
+          },
+          "Presentation Design": {
+            title: "Presentation Design",
+            description: "Make your slides stand out with professional designs.",
+            link: "#",
+            src: "https://via.placeholder.com/340"
+          },
+          "Package Design": {
+            title: "Package Design",
+            description: "Attractive packaging to enhance your product's appeal.",
+            link: "#",
+            src: "https://via.placeholder.com/340"
+          },
+          "Brand Identity": {
+            title: "Brand Identity",
+            description: "Comprehensive branding solutions for your business.",
+            link: "#",
+            src: "https://via.placeholder.com/340"
+          }
+    };
+
+    function showDetails123(service) {
+      document.querySelector(".details123 h3").textContent = servicedetails123[service].title;
+      document.querySelector(".details123 p").textContent = servicedetails123[service].description;
+      document.querySelector(".details123 a").href = servicedetails123[service].link;
+      document.querySelector(".details123 img").src = servicedetails123[service].src;
+    }
+</script>
+
+<h1 class="headermin">AIEMO <span class="color1">GRAPHICS</span> DESIGNIN<span class="underStand">G</span></h1>
+<div class="containerContains123">
+  <div class="container123">
+    <div class="services1234">
+      <div onmouseover="showDetails123('Logo Design')">Logo Design</div>
+      <div onmouseover="showDetails123('Business Cards')">Business Cards</div>
+      <div onmouseover="showDetails123('Brochure Design')">Brochure Design</div>
+      <div onmouseover="showDetails123('Social Media Graphics')">Social Media Graphics</div>
+      <div onmouseover="showDetails123('Flyer Design')">Flyer Design</div>
+      <div onmouseover="showDetails123('Infographic Design')">Infographic Design</div>
+      <div onmouseover="showDetails123('Poster Design')">Poster Design</div>
+      <div onmouseover="showDetails123('Presentation Design')">Presentation Design</div>
+      <div onmouseover="showDetails123('Package Design')">Package Design</div>
+      <div onmouseover="showDetails123('Brand Identity')">Brand Identity</div>
+    </div>
+    <div class="details123">
+      <h3>Hover over a service</h3>
+      <p>Select a service from the left to see details here.</p>
+      <img src="https://via.placeholder.com/340" alt="Services Image">
+      <a href="#" target="_blank">Learn more</a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  <ul class="social-icon">
+    <li class="social-icon__item">
+      <a class="social-icon__link" href="#">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+    </li>
+    <li class="social-icon__item">
+      <a class="social-icon__link" href="#">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+    </li>
+    <li class="social-icon__item">
+      <a class="social-icon__link" href="#">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+    </li>
+    <li class="social-icon__item">
+      <a class="social-icon__link" href="#">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+    </li>
+  </ul>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+    <li class="menu__item"><a class="menu__link" href="../about.html">About</a></li>
+    <li class="menu__item">
+      <a class="menu__link" href="#">Services</a>
+    </li>
+    <li class="menu__item"><a class="menu__link" href="../careers.html">Careers</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+  </ul>
+  <p>&copy;2024 Aiemo Services | All Rights Reserved</p>
+</footer>
+<script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+
+</body>
+</html>
