@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Aiemo Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://slater.app/10324/23333.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      padding: 0 20px;
+    }
+
+    .about-section {
+      margin: 50px auto;
+      max-width: 1200px;
+    }
+    
+    h2::after {
+      content: '';
+      display: block;
+      margin: 10px 0;
+      width: 50px;
+      height: 5px;
+      background-color: #8a2be2;
+    }
+    
+    .content-container {
+      display: flex;
+      margin-top: 30px;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .content-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    
+    .left-content {
+      flex: 1;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    
+    .left-content h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+    
+    .left-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #bbb;
+    }
+    
+    .right-image {
+      flex: 1;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .right-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      max-height: 450px;
+
+    }
+
+</style>
+
+</head>
+<body>
+  <header class="py-4 bg-black sm:py-6" x-data="{expanded: false}">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <div class="shrink-0">
+          <a
+            href="/"
+            title=""
+            class="flex"
+            style="font-size: 2rem; color: #9b83ee; font-weight: bold"
+          >
+          <img src="./logo.png" style="width: 150px; justify-self: center; object-fit: cover;">
+          </a>
+        </div>
+
+        <div class="flex md:hidden">
+          <button
+            type="button"
+            class="text-white"
+            @click="expanded = !expanded"
+            :aria-expanded="expanded"
+          >
+            <span x-show="!expanded" aria-hidden="true">
+              <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </span>
+
+            <span x-show="expanded" aria-hidden="true">
+              <svg
+                class="w-7 h-7"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <nav
+          class="hidden ml-10 mr-auto space-x-10 lg:space-x-12 md:flex md:items-center md:justify-center lg:justify-center w-full mgClass"
+        >
+          <a
+            href="/"
+            title=""
+            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white active"
+          >
+            Home
+          </a>
+
+          <a
+            href="about.html"
+            title=""
+            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+          >
+            About
+          </a>
+
+          <a
+            href="./#services"
+            title=""
+            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+          >
+            Services
+          </a>
+          <a
+            href="careers.html"
+            title=""
+            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+          >
+            Careers
+          </a>
+          <a
+            href="#"
+            title=""
+            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white upComing"
+          >
+            Upcoming Services&nbsp;<i class="fa-solid fa-chevron-down"></i>
+            <div class="dropDwn dropUpcoming">
+              <img src="https://images.pexels.com/photos/3843284/pexels-photo-3843284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+              <ul>
+                <li>Aiemo Travel Agency</li>
+                <li>Aiemo Catering Services</li>
+                <li>Sell Your E-Waste</li>
+                <li>Sell Scrap</li>
+              </ul>
+              <ul>
+                <li>Aiemo Painting Services</li>
+              </ul>
+            </div>
+          </a>
+        </nav>
+
+        <div
+          class="relative hidden md:items-center md:justify-center md:inline-flex group"
+        >
+          <div
+            class="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"
+          ></div>
+          <a
+            href="login.html"
+            title=""
+            class="relative inline-flex items-center justify-center px-6 py-2 text-base font-normal text-white bg-black border border-transparent rounded-full"
+            role="button"
+          >
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="about-section">
+    <div class="content-container">
+      <!-- Right Static Image -->
+      <div class="right-image">
+        <img src="https://images.pexels.com/photos/2681319/pexels-photo-2681319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Aiemo Services">
+      </div>
+
+       <!-- Left Content -->
+       <div class="left-content">
+        <h2>ABOUT US</h2>
+        <p>
+          At Aiemo Services, we bring innovative technology solutions that
+          transform businesses into industry leaders. Our expertise spans across AI,
+          data analytics, and custom digital solutions to drive efficiency and innovation.
+        </p>
+        <p>
+          We are dedicated to delivering unmatched value, ensuring every solution is tailored
+          to meet the unique challenges of our clients.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .containerContains123 {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 140vh;
+    }
+
+    .container123 {
+      display: flex;
+      width: 80%;
+      height: 70vh;
+      gap: 20px;
+    }
+
+    .services1234 {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .services1234 div {
+      padding: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: #bbb;
+      border-left: 4px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .services1234 div:hover {
+      color: #fff;
+      border-left: 4px solid #8a2be2;
+      padding-left: 25px;
+    }
+
+    .details123 {
+      flex: 2;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .details123 {
+        display: none;
+      }
+    }
+
+    .details123 h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .details123 p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #bbb;
+    }
+
+    .details123 a {
+      margin-top: 20px;
+      text-decoration: none;
+      color: #8a2be2;
+      font-weight: bold;
+    }
+
+    .details123 img {
+        height: 340px;
+        object-fit: cover;
+    }
+</style>
+
+<script>
+    const servicedetails123 = {
+      "IT Services": {
+        title: "IT Services",
+        description: "Providing comprehensive IT support and infrastructure management.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      Photography: {
+        title: "Photography",
+        description: "Capture your moments with our professional photography services.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Graphic Design": {
+        title: "Graphic Design",
+        description: "Creative graphic designs for your brand and digital presence.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Interior Design": {
+        title: "Interior Design",
+        description: "Transform your space with stylish and functional designs.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      Crafting: {
+        title: "Crafting",
+        description: "Handmade crafts for personalized gifts and decor.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Charted Accountant Services": {
+        title: "Charted Accountant Services",
+        description: "Accounting and financial consulting for your business.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Bicycle Services": {
+        title: "Bicycle Services",
+        description: "Repair and maintenance services for your bicycles.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Digital Marketing": {
+        title: "Digital Marketing",
+        description: "Boost your online presence with our marketing strategies.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      Construction: {
+        title: "Construction",
+        description: "Reliable and expert construction services for all your needs.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      Education: {
+        title: "Education",
+        description: "Quality education and training for your career growth.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Pet Services": {
+        title: "Pet Services",
+        description: "Comprehensive care and grooming for your pets.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Event Management": {
+        title: "Event Management",
+        description: "Plan and execute your events with professional assistance.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Pharmacy Services": {
+        title: "Pharmacy Services",
+        description: "Prescription and over-the-counter pharmaceutical solutions.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Door to Door Services": {
+        title: "Door to Door Services",
+        description: "Reliable delivery and courier services at your doorstep.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    };
+
+    function showDetails123(service) {
+      document.querySelector(".details123 h3").textContent = servicedetails123[service].title;
+      document.querySelector(".details123 p").textContent = servicedetails123[service].description;
+      document.querySelector(".details123 a").href = servicedetails123[service].link;
+      document.querySelector(".details123 img").src = servicedetails123[service].src;
+    }
+</script>
+
+<style>
+  .what {
+    font-size: 4rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .color1 {
+    color: #8a2be2;
+  }
+
+  .unline {
+    border-bottom: 5px solid #8a2be2;
+  }
+</style>
+
+<h1 class="what">WHAT <span class="color1">WE</span> DO<span class="unline">?</span></h1>
+
+<div class="containerContains123">
+  <div class="container123">
+    <div class="services1234">
+      <div data-service="IT Services" onmouseover="showDetails123('IT Services')">IT Services</div>
+      <div data-service="Photography" onmouseover="showDetails123('Photography')">Photography</div>
+      <div data-service="Graphic Design" onmouseover="showDetails123('Graphic Design')">Graphic Design</div>
+      <div data-service="Interior Design" onmouseover="showDetails123('Interior Design')">Interior Design</div>
+      <div data-service="Crafting" onmouseover="showDetails123('Crafting')">Crafting</div>
+      <div data-service="Charted Accountant Services" onmouseover="showDetails123('Charted Accountant Services')">Charted Accountant Services</div>
+      <div data-service="Bicycle Services" onmouseover="showDetails123('Bicycle Services')">Bicycle Services</div>
+      <div data-service="Digital Marketing" onmouseover="showDetails123('Digital Marketing')">Digital Marketing</div>
+      <div data-service="Construction" onmouseover="showDetails123('Construction')">Construction</div>
+      <div data-service="Education" onmouseover="showDetails123('Education')">Education</div>
+      <div data-service="Pet Services" onmouseover="showDetails123('Pet Services')">Pet Services</div>
+      <div data-service="Event Management" onmouseover="showDetails123('Event Management')">Event Management</div>
+      <div data-service="Pharmacy Services" onmouseover="showDetails123('Pharmacy Services')">Pharmacy Services</div>
+      <div data-service="Door to Door Services" onmouseover="showDetails123('Door to Door Services')">Door to Door Services</div>
+    </div>
+    <div class="details123">
+      <h3>Hover over a service</h3>
+      <img src="" alt="Services Image">
+      <p>Select a service from the left to see details here.</p>
+      <a href="#" target="_blank">Learn more</a>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  <ul class="social-icon">
+    <li class="social-icon__item">
+      <a class="social-icon__link" href="#">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+    </li>
+    <li class="social-icon__item">
+      <a class="social-icon__link" href="#">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+    </li>
+    <li class="social-icon__item">
+      <a class="social-icon__link" href="#">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+    </li>
+    <li class="social-icon__item">
+      <a class="social-icon__link" href="#">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+    </li>
+  </ul>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+    <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+    <li class="menu__item">
+      <a class="menu__link" href="#">Services</a>
+    </li>
+    <li class="menu__item"><a class="menu__link" href="careers.html">Careers</a></li>
+    <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+  </ul>
+  <p>&copy;2024 Aiemo Services | All Rights Reserved</p>
+</footer>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+
+
+</body>
+</html>

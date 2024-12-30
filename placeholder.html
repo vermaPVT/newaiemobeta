@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .containerContains123 {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container123 {
+      display: flex;
+      width: 80%;
+      height: 70vh;
+      gap: 20px;
+    }
+
+    .services1234 {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .services1234 div {
+      padding: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: #bbb;
+      border-left: 4px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .services1234 div:hover {
+      color: #fff;
+      border-left: 4px solid #8a2be2;
+      padding-left: 25px;
+    }
+
+    .details123 {
+      flex: 2;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .details123 h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .details123 p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #bbb;
+    }
+
+    .details123 a {
+      margin-top: 20px;
+      text-decoration: none;
+      color: #8a2be2;
+      font-weight: bold;
+    }
+
+    .details123 img {
+        height: 340px;
+        object-fit: cover;
+    }
+</style>
+
+<script>
+    const servicedetails123 = {
+      "IT Services": {
+        title: "IT Services",
+        description: "Providing comprehensive IT support and infrastructure management.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      Photography: {
+        title: "Photography",
+        description: "Capture your moments with our professional photography services.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Graphic Design": {
+        title: "Graphic Design",
+        description: "Creative graphic designs for your brand and digital presence.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Interior Design": {
+        title: "Interior Design",
+        description: "Transform your space with stylish and functional designs.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      Crafting: {
+        title: "Crafting",
+        description: "Handmade crafts for personalized gifts and decor.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Charted Accountant Services": {
+        title: "Charted Accountant Services",
+        description: "Accounting and financial consulting for your business.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Bicycle Services": {
+        title: "Bicycle Services",
+        description: "Repair and maintenance services for your bicycles.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Digital Marketing": {
+        title: "Digital Marketing",
+        description: "Boost your online presence with our marketing strategies.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      Construction: {
+        title: "Construction",
+        description: "Reliable and expert construction services for all your needs.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      Education: {
+        title: "Education",
+        description: "Quality education and training for your career growth.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Pet Services": {
+        title: "Pet Services",
+        description: "Comprehensive care and grooming for your pets.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Event Management": {
+        title: "Event Management",
+        description: "Plan and execute your events with professional assistance.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Pharmacy Services": {
+        title: "Pharmacy Services",
+        description: "Prescription and over-the-counter pharmaceutical solutions.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      "Door to Door Services": {
+        title: "Door to Door Services",
+        description: "Reliable delivery and courier services at your doorstep.",
+        link: "#",
+        src: "https://images.pexels.com/photos/29956725/pexels-photo-29956725/free-photo-of-solitary-bird-perched-on-bare-branch-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    };
+
+    function showDetails123(service) {
+      document.querySelector(".details123 h3").textContent = servicedetails123[service].title;
+      document.querySelector(".details123 p").textContent = servicedetails123[service].description;
+      document.querySelector(".details123 a").href = servicedetails123[service].link;
+      document.querySelector(".details123 img").src = servicedetails123[service].src;
+    }
+</script>
+
+<div class="containerContains123">
+  <div class="container123">
+    <div class="services1234">
+      <div data-service="IT Services" onmouseover="showDetails123('IT Services')">IT Services</div>
+      <div data-service="Photography" onmouseover="showDetails123('Photography')">Photography</div>
+      <div data-service="Graphic Design" onmouseover="showDetails123('Graphic Design')">Graphic Design</div>
+      <div data-service="Interior Design" onmouseover="showDetails123('Interior Design')">Interior Design</div>
+      <div data-service="Crafting" onmouseover="showDetails123('Crafting')">Crafting</div>
+      <div data-service="Charted Accountant Services" onmouseover="showDetails123('Charted Accountant Services')">Charted Accountant Services</div>
+      <div data-service="Bicycle Services" onmouseover="showDetails123('Bicycle Services')">Bicycle Services</div>
+      <div data-service="Digital Marketing" onmouseover="showDetails123('Digital Marketing')">Digital Marketing</div>
+      <div data-service="Construction" onmouseover="showDetails123('Construction')">Construction</div>
+      <div data-service="Education" onmouseover="showDetails123('Education')">Education</div>
+      <div data-service="Pet Services" onmouseover="showDetails123('Pet Services')">Pet Services</div>
+      <div data-service="Event Management" onmouseover="showDetails123('Event Management')">Event Management</div>
+      <div data-service="Pharmacy Services" onmouseover="showDetails123('Pharmacy Services')">Pharmacy Services</div>
+      <div data-service="Door to Door Services" onmouseover="showDetails123('Door to Door Services')">Door to Door Services</div>
+    </div>
+    <div class="details123">
+      <h3>Hover over a service</h3>
+      <img src="" alt="Services Image">
+      <p>Select a service from the left to see details here.</p>
+      <a href="#" target="_blank">Learn more</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prj_Next</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://slater.app/10324/23333.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <!-- <div class="notice">
+      <p>This is a development build and some features may look different or won't work here....</p>
+      <div class="okk">Okk</div>
+  </div> -->
+    <div class="mainContainer13">
+      <header class="py-4 bg-black sm:py-6" x-data="{expanded: false}">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between">
+            <div class="shrink-0">
+              <a
+                href="/"
+                title=""
+                class="flex"
+                style="font-size: 2rem; color: #9b83ee; font-weight: bold"
+              >
+              <img src="./logo.png" style="width: 150px; justify-self: center; object-fit: cover;">
+              </a>
+            </div>
+
+            <div class="flex md:hidden">
+              <button
+                type="button"
+                class="text-white"
+                @click="expanded = !expanded"
+                :aria-expanded="expanded"
+              >
+                <span x-show="!expanded" aria-hidden="true">
+                  <svg
+                    class="w-7 h-7"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                </span>
+
+                <span x-show="expanded" aria-hidden="true">
+                  <svg
+                    class="w-7 h-7"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <nav
+              class="hidden ml-10 mr-auto space-x-10 lg:space-x-12 md:flex md:items-center md:justify-center lg:justify-center w-full mgClass"
+            >
+              <a
+                href="/"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white active"
+              >
+                Home
+              </a>
+
+              <a
+                href="about.html"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+              >
+                About
+              </a>
+
+              <a
+            href="./#services"
+            title=""
+            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+          >
+                Services
+              </a>
+              <a
+                href="careers.html"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+              >
+                Careers
+              </a>
+              <a
+                href="#"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white upComing"
+              >
+                Upcoming Services&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                <div class="dropDwn dropUpcoming">
+                  <img src="https://images.pexels.com/photos/3843284/pexels-photo-3843284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                  <ul>
+                    <li>Aiemo Travel Agency</li>
+                    <li>Aiemo Catering Services</li>
+                    <li>Sell Your E-Waste</li>
+                    <li>Sell Scrap</li>
+                  </ul>
+                  <ul>
+                    <li>Aiemo Painting Services</li>
+                  </ul>
+                </div>
+              </a>
+            </nav>
+
+            <div
+              class="relative hidden md:items-center md:justify-center md:inline-flex group"
+            >
+              <div
+                class="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"
+              ></div>
+              <a
+                href="login.html"
+                title=""
+                class="relative inline-flex items-center justify-center px-6 py-2 text-base font-normal text-white bg-black border border-transparent rounded-full"
+                role="button"
+              >
+                Login
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section
+        class="relative my-12 overflow-hidden bg-black sm:pb-16 lg:pb-20 xl:pb-24 topSectionVideo"
+      >
+        <video src="./background.mp4" muted="true" loop="true" autoplay></video>
+        <div class="overlay12"></div>
+        <div class="px-4 mx-auto relativea sm:px-6 lg:px-8 max-w-7xl text-center">
+          <div
+            class="grid items-center grid-cols-1 gap-y-12 lg:grid-cols-2 gap-x-16"
+            style="grid-template-columns: 2fr;"
+          >
+            <div>
+              <h2 class="headermin headermin2">
+                Find Your <span class="color1">Perfect</span> Match: Services Just for Yo<span class="underStand">u</span>
+              </h2>
+              <p class="headerminPara">
+                Welcome to our services page, where finding what you need is quick and easy! Use the search bar to explore a variety of offerings tailored just for you. Whether you're looking for specialized services or unique products, this page has it all. Simply type your query, and relevant results will appear instantly. If no results match your search, don’t worry—we’ll let you know so you can refine your query. Our goal is to make your experience seamless and hassle-free. Start exploring now, and discover the services that perfectly suit your needs! Happy searching!
+              </p>
+
+              <form
+                action="/query.html"
+                method="GET"
+                class="relative mt-8 rounded-full sm:mt-12 okkMobileSearch"
+                style="margin: 40px auto;"
+              >
+                <div class="relative">
+                  <div
+                    class="absolute rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500"
+                    
+                  ></div>
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 left-0 flex items-center pl-6"
+              
+                    >
+                      <svg
+                        class="w-5 h-5 text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        />
+                      </svg>
+                    </div>
+                    <input
+                      type="text"
+                      name="q"
+                      id="search"
+                      placeholder="Try Home Decoration, IT, Pet Services etc."
+                      class="block w-full py-4 pr-6 text-white placeholder-gray-500 bg-black border border-transparent rounded-full pl-14 sm:py-5 focus:border-transparent focus:ring-0"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="sm:absolute flex sm:right-1.5 sm:inset-y-1.5 mt-4 sm:mt-0"
+                >
+                  <button
+                    type="submit"
+                    class="inline-flex items-center justify-center w-full px-5 py-5 text-sm font-semibold tracking-widest text-black uppercase transition-all duration-200 bg-white rounded-full sm:w-auto sm:py-3 hover:opacity-90"
+                  >
+                    Find A Provider
+                  </button>
+                </div>
+              </form>
+
+
+              <p class="mt-4 text-lg font-normal sm:mt-8" style="font-size: 1.5rem;">
+                Showing Results For:&nbsp;<span id="header-text">_</span>
+              </p>
+
+            </div>
+
+           
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Card Container -->
+
+<section class="services-container" id="services">
+  <!-- Card 1 -->
+  <a href="/s/it.html" class="card" style="background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+    <div class="card-content">
+      <h3 class="title">Aiemo IT Services</h3>
+      <p class="provider">Aiemo Services</p>
+    </div>
+  </a>
+
+  <!-- Card 2 -->
+  <a href="s/photography.html" class="card" style="background-image: url('https://images.pexels.com/photos/243757/pexels-photo-243757.jpeg?auto=compress&cs=tinysrgb&w=800');">
+    <div class="card-content">
+      <h3 class="title">Aiemo Photography</h3>
+      <p class="provider">Aiemo Services</p>
+      
+    </div>
+
+  </a>
+
+  <!-- Card 3 -->
+  <a href="s/graphics.html" class="card" style="background-image: url('https://images.pexels.com/photos/29645160/pexels-photo-29645160/free-photo-of-digital-artist-using-tablet-and-stylus-pen.jpeg?auto=compress&cs=tinysrgb&w=800');">
+    <div class="card-content">
+      <h3 class="title">Aiemo Graphic Designing</h3>
+      <p class="provider">Aiemo Services</p>
+      
+    </div>
+
+  </a>
+
+  <!-- Card 4 -->
+  <a href="s/interior.html" class="card" style="background-image: url('https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+    <div class="card-content">
+      <h3 class="title">Aiemo Interior Design</h3>
+      <p class="provider">Aiemo Services</p>
+      
+    </div>
+
+  </a>
+
+  <!-- Card 1 -->
+  <a href="s/woods.html" class="card" style="background-image: url('https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+      <div class="card-content">
+        <h3 class="title">Aiemo Woods & Carpentry Items</h3>
+        <p class="provider">Aiemo Services</p>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="s/construction.html" class="card" style="background-image: url('https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+      <div class="card-content">
+        <h3 class="title">Aiemo Construction</h3>
+        <p class="provider">Aiemo Services</p>
+      </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="s/edu.html" class="card" style="background-image: url('https://images.pexels.com/photos/716281/pexels-photo-716281.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+      <div class="card-content">
+        <h3 class="title">Aiemo Education</h3>
+        <p class="provider">Aiemo Services</p>
+      </div>
+    </a>
+
+    <!-- Card 4 -->
+    <a href="s/pet.html" class="card" style="background-image: url('https://images.pexels.com/photos/1629781/pexels-photo-1629781.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+      <div class="card-content">
+        <h3 class="title">Aiemo Pets Services</h3>
+        <p class="provider">Aiemo Services</p>
+        </div>
+    </a>
+
+        <!-- Card 4 -->
+        <a href="s/chartered.html" class="card" style="background-image: url('https://images.pexels.com/photos/8062358/pexels-photo-8062358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+          <div class="card-content">
+            <h3 class="title">Aiemo Charted Accountant Services</h3>
+            <p class="provider">Aiemo Services</p>
+            </div>
+        </a>
+
+            <!-- Card 4 -->
+    <a href="s/bicycle.html" class="card" style="background-image: url('https://images.pexels.com/photos/5803350/pexels-photo-5803350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+      <div class="card-content">
+        <h3 class="title">Aiemo Bicycle Services</h3>
+        <p class="provider">Aiemo Services</p>
+        </div>
+    </a>
+
+        <!-- Card 4 -->
+        <a href="s/marketing.html" class="card" style="background-image: url('https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+          <div class="card-content">
+            <h3 class="title">Aiemo Digital Marketing</h3>
+            <p class="provider">Aiemo Services</p>
+            </div>
+        </a>
+
+            <!-- Card 4 -->
+    <a href="s/event.html" class="card" style="background-image: url('https://images.pexels.com/photos/50675/banquet-wedding-society-deco-50675.jpeg?auto=compress&cs=tinysrgb&w=600');">
+      <div class="card-content">
+        <h3 class="title">Aiemo Event Management</h3>
+        <p class="provider">Aiemo Services</p>
+        </div>
+    </a>
+
+        <!-- Card 4 -->
+        <a href="s/pharmacy.html" class="card" style="background-image: url('https://images.pexels.com/photos/7551663/pexels-photo-7551663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+          <div class="card-content">
+            <h3 class="title">Aiemo Pharmacy Services</h3>
+            <p class="provider">Aiemo Services</p>
+            </div>
+        </a>
+
+
+                <!-- Card 4 -->
+                <a href="s/door.html" class="card" style="background-image: url('https://images.pexels.com/photos/7362962/pexels-photo-7362962.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+                  <div class="card-content">
+                    <h3 class="title">Aiemo Door To Door Services</h3>
+                    <p class="provider">Aiemo Services</p>
+                    </div>
+                </a>
+
+</section>
+
+
+
+      <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Services</a>
+          </li>
+          <li class="menu__item"><a class="menu__link" href="careers.html">Careers</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+        </ul>
+        <p>&copy;2024 Aiemo Services | All Rights Reserved</p>
+      </footer>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const cards = document.querySelectorAll(".services-container .card");
+          const urlParams = new URLSearchParams(window.location.search);
+          const query = urlParams.get("q")?.toLowerCase();
+          const search = document.querySelector("#search");
+      
+          const headerText = document.querySelector("#header-text"); // ID ya class ka use karo text ke liye
+          
+
+          if (query) {
+            let visibleCard = false;
+      
+            cards.forEach((card) => {
+              const title = card.querySelector(".title").textContent.toLowerCase();
+              if (title.includes(query)) {
+                card.style.display = "block";
+                visibleCard = true;
+              } else {
+                card.style.display = "none";
+              }
+            });
+      
+            // Update the header text with the query
+            if (headerText) {
+              headerText.textContent = query;
+            }
+
+            if(search) {
+                search.value = query;
+            }
+      
+            if (!visibleCard) {
+              const message = document.createElement("h2");
+              message.textContent = "No result found for query: " + query;
+              message.style.color = "white";
+              message.style.textAlign = "center";
+              message.style.marginTop = "20px";
+              message.style.fontSize = "2rem";
+              document.querySelector(".services-container").appendChild(message);
+            }
+          }
+        });
+      </script>
+                  
+
+  </body>
+</html>

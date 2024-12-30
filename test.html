@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prj_Next</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://slater.app/10324/23333.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #ccc;
+        background: black;
+        transition: background-color 0.4s ease;
+      }
+
+      .cardContains12 {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        gap: 2rem;
+      }
+
+      .nft {
+        user-select: none;
+        max-width: 250px;
+        margin: 1rem auto;
+        border: 1px solid #ffffff22;
+        background-color: #282c34;
+        cursor: pointer;
+        background: linear-gradient(
+          0deg,
+          rgba(40, 44, 52, 1) 0%,
+          rgba(17, 0, 32, 0.5) 100%
+        );
+        box-shadow: 0 7px 20px 5px #00000088;
+        border-radius: 0.7rem;
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        overflow: hidden;
+        transition: 0.5s all;
+
+        hr {
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid #88888855;
+          margin-top: 0;
+        }
+        ins {
+          text-decoration: none;
+        }
+        .main {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding: 1rem;
+          h2 {
+            margin-top: 10px;
+          }
+          .tokenImage {
+            border-radius: 0.5rem;
+            max-width: 100%;
+            height: 250px;
+            object-fit: cover;
+          }
+          .description {
+            margin: 0.5rem 0;
+            color: #a89ec9;
+          }
+          .tokenInfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .price {
+              display: flex;
+              align-items: center;
+              color: #ee83e5;
+              font-weight: 700;
+              ins {
+                margin-left: -0.3rem;
+                margin-right: 0.5rem;
+              }
+            }
+            .duration {
+              display: flex;
+              align-items: center;
+              color: #a89ec9;
+              margin-right: 0.2rem;
+              ins {
+                margin: 0.5rem;
+                margin-bottom: 0.4rem;
+              }
+            }
+          }
+          .creator {
+            display: flex;
+            align-items: center;
+            margin-top: 0.2rem;
+            margin-bottom: -0.3rem;
+            font-size: 0.8rem;
+            ins {
+              color: #a89ec9;
+              text-decoration: none;
+            }
+            .wrapper {
+              display: flex;
+              align-items: center;
+              border: 1px solid #ffffff22;
+              padding: 0.3rem;
+              margin: 0;
+              margin-right: 0.5rem;
+              border-radius: 100%;
+              box-shadow: inset 0 0 0 4px #000000aa;
+              img {
+                border-radius: 100%;
+                border: 1px solid #ffffff22;
+                width: 2rem;
+                height: 2rem;
+                object-fit: cover;
+                margin: 0;
+              }
+            }
+          }
+        }
+        ::before {
+          position: fixed;
+          content: "";
+          box-shadow: 0 0 100px 40px #ffffff08;
+          top: -10%;
+          left: -100%;
+          transform: rotate(-45deg);
+          height: 60rem;
+          transition: 0.7s all;
+        }
+        &:hover {
+          border: 1px solid #ffffff44;
+          box-shadow: 0 7px 50px 10px #000000aa;
+          transform: scale(1.015);
+          filter: brightness(1.3);
+          ::before {
+            filter: brightness(0.5);
+            top: -100%;
+            left: 200%;
+          }
+        }
+      }
+
+      .bg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h1 {
+          font-size: 20rem;
+          filter: opacity(0.5);
+        }
+      }
+
+      .topSectionVideo {
+        background: none;
+
+        div {
+          z-index: 1;
+        }
+      }
+
+      .topSectionVideo video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .overlay12 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+      }
+
+      .faqContainer12 {
+        margin: 100px 0;
+        margin-bottom: 250px;
+        width: 100%;
+        min-height: 350vh;
+        transition: background-color 0.4s ease;
+        color: white; /* Light purple */
+
+        h2 {
+          margin: 0 auto;
+          font-weight: 300;
+          font-size: 5rem;
+          font-weight: bold;
+          text-align: center;
+          letter-spacing: 2px;
+          line-height: 1.5;
+          position: sticky;
+          top: 0vh;
+          width: 60%;
+          margin: 0 auto;
+        }
+
+        .Que {
+        width: 80%;
+        margin: 0 auto;
+        padding: 70px 30px;
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.5;
+        background: rgb(255, 243, 220);
+        border-radius: 50px;
+        margin: 200px auto;
+        position: sticky;
+        top: 35vh;
+        color: #999;
+        margin-bottom: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        border: 1px solid #ccc;
+
+
+      .question {
+        font-size: 2rem;
+        color: rgb(102, 49, 12);
+        margin-bottom: 40px;
+      }
+
+      .answer {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+      }
+    }
+
+    .firstQue {
+      /* background: blue; */
+      background-color: white;
+      color: #0b2959;
+
+      .question {
+        color: #0b2959
+      }
+    }
+
+    .secondQue {
+      /* background: rgb(0, 255, 145); */
+      background-color: white;
+      color: #0b2959;
+      top: 36vh;
+
+      .question {
+        color: #0b2959
+      }
+    }
+
+    .thirdQue {
+      /* background: rgb(255, 77, 0); */
+      background-color: white;
+      color: #0b2959;
+      top: 37vh;
+
+      .question {
+        color: #0b2959
+      }
+    }
+
+
+    .fourthQue {
+      /* background: #9b83ee; */
+      background-color: white;
+      color: #0b2959;
+      top: 38vh;
+
+      .question {
+        color: #0b2959
+      }
+    }
+
+
+    .fifthQue {
+      opacity: 0;
+    }
+      }
+
+      .footer {
+        margin-top: 40vh;
+        position: relative;
+        width: 100%;
+        background: #9b83ee;
+        min-height: 100px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .social-icon,
+      .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+      }
+
+      .social-icon__item,
+      .menu__item {
+        list-style: none;
+      }
+
+      .social-icon__link {
+        font-size: 2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+      }
+      .social-icon__link:hover {
+        transform: translateY(-10px);
+      }
+
+      .menu__link {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        opacity: 0.75;
+        font-weight: 300;
+      }
+
+      .menu__link:hover {
+        opacity: 1;
+      }
+
+      .footer p {
+        color: #fff;
+        margin: 15px 0 10px 0;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+
+      .wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url("wavemain.png");
+        background-size: 1000px 100px;
+      }
+
+      .wave#wave1 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWaves 4s linear infinite;
+      }
+
+      .wave#wave2 {
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animate 4s linear infinite !important;
+      }
+
+      .wave#wave3 {
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animateWaves 3s linear infinite;
+      }
+
+      .wave#wave4 {
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animate 3s linear infinite;
+      }
+
+      @keyframes animateWaves {
+        0% {
+          background-position-x: 1000px;
+        }
+        100% {
+          background-positon-x: 0px;
+        }
+      }
+
+      @keyframes animate {
+        0% {
+          background-position-x: -1000px;
+        }
+        100% {
+          background-positon-x: 0px;
+        }
+      }
+
+
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+
+
+.noMObile {
+    display: none;
+}
+
+.notice {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  border-top: 5px solid #9b59b6;
+  background-color: #212121ee;
+  width: 100%;
+  z-index: 9999;
+  text-align: center;
+
+  .okk {
+    background-color: #9b59b6;
+    width: 7%;
+    margin: 10px auto;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 900px) {
+    .noMObile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: Black;
+        color: white;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        p {
+          font-size: 2rem;
+        }
+    }
+}
+
+.mgClass {
+  a {
+    padding: 5px 20px;
+    margin: 0 5px!important;
+  }
+
+}
+
+
+
+
+.contactContainer {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        
+
+        /* Contact Info Section */
+        .contact-info {
+            background-color: #9b83ee;
+            color: white;
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 80vh;
+            transition: all ease 0.3s;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-size: 3rem;
+        }
+
+        .contact-info p, .contact-info a {
+            font-size: 16px;
+            margin: 10px 0;
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info .icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info .icon img {
+            margin-right: 10px;
+        }
+
+        /* Form Section */
+        .contact-form {
+            background-color: #171721;
+            padding: 30px;
+            flex: 2;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #fff;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 2px solid #2a2a38;
+            background-color: #2a2a38;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #999;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #005eff;
+        }
+
+        .contact-form button {
+            background-color: #9b83ee;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+      }
+
+
+      .contactContainer:hover {
+        .contact-info {
+          background-color: #005eff;
+        }
+
+        .contact-form button {
+          background-color: #005eff;
+        }
+      }
+
+
+      .upComing {
+        .dropDwn {
+          position: absolute;
+          width: 90%;
+          top: 80px;
+          left: 5%;
+          background: black;
+          border: 3px solid white;
+          padding: 50px;
+          border-radius: 20px;
+          z-index: 9999;
+          color: white;
+          transition: ease-in-out display 0.4s;
+          display: none;
+          line-height: 1.5;
+          gap: 100px;
+          ul {
+            list-style: initial;
+          }
+
+          li {
+            margin: 20px 0;
+            font-size: 17px;
+            text-decoration: underline;
+          }
+        }
+
+        img {
+          width: 250px;
+          border-radius: 20px;
+        }
+
+        .dropDwn::before {
+          position: absolute;
+          content: "";
+          display: block;
+          top: -100px;
+          height: 300px;
+          width: 100%;
+          left: 0;
+          background-color: transparent;
+          z-index: 999;
+        }
+        }
+
+        .upComing:hover {
+          .dropDwn {
+            display: flex;
+          }
+        }
+
+        .dropDwn:hover {
+          display: flex;
+        }
+      
+
+        /* .upComing:hover {
+          .dropDwn {
+            height: 100px;
+          }
+        } */
+
+        /* dropUpcoming */
+      
+
+
+    </style>
+  </head>
+  <body>
+    <div class="noMObile">
+      <p>Please ensure you are viewing this in PC or Laptop</p>
+      <small>Shhh.... Let's not leak our hardwork (Please Do Not Share This Link to Anyone or You Will be Banned...)</small>
+  </div>
+  <!-- <div class="notice">
+      <p>This is a development build and some features may look different or won't work here....</p>
+      <div class="okk">Okk</div>
+  </div> -->
+    <div class="mainContainer13">
+      <header class="py-4 bg-black sm:py-6" x-data="{expanded: false}">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between">
+            <div class="shrink-0">
+              <a
+                href="/"
+                title=""
+                class="flex"
+                style="font-size: 2rem; color: #9b83ee; font-weight: bold"
+              >
+              <img src="./logo.png" style="width: 150px; justify-self: center; object-fit: cover;">
+              </a>
+            </div>
+
+            <div class="flex md:hidden">
+              <button
+                type="button"
+                class="text-white"
+                @click="expanded = !expanded"
+                :aria-expanded="expanded"
+              >
+                <span x-show="!expanded" aria-hidden="true">
+                  <svg
+                    class="w-7 h-7"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                </span>
+
+                <span x-show="expanded" aria-hidden="true">
+                  <svg
+                    class="w-7 h-7"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <nav
+              class="hidden ml-10 mr-auto space-x-10 lg:space-x-12 md:flex md:items-center md:justify-center lg:justify-center w-full mgClass"
+            >
+              <a
+                href="/"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white active"
+              >
+                Home
+              </a>
+
+              <a
+                href="about.html"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+              >
+                About
+              </a>
+
+              <a
+            href="./#services"
+            title=""
+            class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+          >
+                Services
+              </a>
+              <a
+                href="careers.html"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white"
+              >
+                Careers
+              </a>
+              <a
+                href="#"
+                title=""
+                class="text-base font-normal text-gray-400 transition-all duration-200 hover:text-white upComing"
+              >
+                Upcoming Services&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                <div class="dropDwn dropUpcoming">
+                  <img src="https://images.pexels.com/photos/3843284/pexels-photo-3843284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                  <ul>
+                    <li>Aiemo Travel Agency</li>
+                    <li>Aiemo Catering Services</li>
+                    <li>Sell Your E-Waste</li>
+                    <li>Sell Scrap</li>
+                  </ul>
+                  <ul>
+                    <li>Aiemo Painting Services</li>
+                  </ul>
+                </div>
+              </a>
+            </nav>
+
+            <div
+              class="relative hidden md:items-center md:justify-center md:inline-flex group"
+            >
+              <div
+                class="absolute transition-all duration-200 rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:shadow-lg group-hover:shadow-cyan-500/50"
+              ></div>
+              <a
+                href="login.html"
+                title=""
+                class="relative inline-flex items-center justify-center px-6 py-2 text-base font-normal text-white bg-black border border-transparent rounded-full"
+                role="button"
+              >
+                Login
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section
+        class="relative my-12 overflow-hidden bg-black sm:pb-16 lg:pb-20 xl:pb-24 topSectionVideo"
+      >
+        <video src="./back2.mp4" muted="true" loop="true" autoplay></video>
+        <div class="overlay12"></div>
+        <div class="px-4 mx-auto relativea sm:px-6 lg:px-8 max-w-7xl">
+          <div
+            class="grid items-center grid-cols-1 gap-y-12 lg:grid-cols-2 gap-x-16"
+            style="grid-template-columns: 2fr 1fr;"
+          >
+            <div>
+              <h1
+                class="text-4xl font-normal text-white sm:text-5xl lg:text-5xl xl:text-5xl font-semibold"
+                style="line-height: 1.5; text-transform: uppercase;"
+              >
+              India's first youth-<br><span id="typewriter" style="background-color: #9b59b6;"></span>
+                
+              </h1>
+              <p class="mt-4 text-lg font-normal sm:mt-8" style="font-size: 1.5rem;">
+                Aiemo is India’s first all in one Service Platform
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                <script>
+                  // Initialize Typed.js
+                  const options = {
+                    strings: [
+                      "powered business hub.",
+                      "led growth hub.",
+                      "driven digital bridge."
+                    ],
+                    typeSpeed: 50,        // Speed of typing
+                    backSpeed: 30,        // Speed of deleting
+                    backDelay: 1000,      // Pause before backspacing
+                    loop: true,           // Loop the typing effect
+                    showCursor: true,     // Show blinking cursor
+                    cursorChar: "|",      // Customize cursor character
+                  };
+
+                  const typed = new Typed("#typewriter", options);
+                </script>
+              </p>
+
+              <form
+                action="#"
+                method="POST"
+                class="relative mt-8 rounded-full sm:mt-12"
+                style="width: 85%;"
+              >
+                <div class="relative">
+                  <div
+                    class="absolute rounded-full -inset-px bg-gradient-to-r from-cyan-500 to-purple-500"
+                    
+                  ></div>
+                  <div class="relative">
+                    <div
+                      class="absolute inset-y-0 left-0 flex items-center pl-6"
+              
+                    >
+                      <svg
+                        class="w-5 h-5 text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        />
+                      </svg>
+                    </div>
+                    <input
+                      type="email"
+                      name=""
+                      id=""
+                      placeholder="Try Home Decoration, IT, Pet Services etc."
+                      class="block w-full py-4 pr-6 text-white placeholder-gray-500 bg-black border border-transparent rounded-full pl-14 sm:py-5 focus:border-transparent focus:ring-0"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="sm:absolute flex sm:right-1.5 sm:inset-y-1.5 mt-4 sm:mt-0"
+                >
+                  <button
+                    type="submit"
+                    class="inline-flex items-center justify-center w-full px-5 py-5 text-sm font-semibold tracking-widest text-black uppercase transition-all duration-200 bg-white rounded-full sm:w-auto sm:py-3 hover:opacity-90"
+                  >
+                    Find A Provider
+                  </button>
+                </div>
+              </form>
+
+              <div class="mt-8 sm:mt-12">
+                <p class="text-lg font-normal text-white">
+                  Trusted by 10k+ users
+                </p>
+
+                <div class="flex items-center mt-3">
+                  <div class="flex">
+                    
+                  </div>
+                  <span class="ml-2 text-base font-normal text-white">
+                    4.1/5
+                  </span>
+                  <span class="ml-1 text-base font-normal text-gray-500">
+                    (4k Reviews)
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="absolute inset-0">
+                <svg
+                  class="blur-3xl filter opacity-70"
+                  style="filter: blur(64px)"
+                  width="444"
+                  height="536"
+                  viewBox="0 0 444 536"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M225.919 112.719C343.98 64.6648 389.388 -70.487 437.442 47.574C485.496 165.635 253.266 481.381 135.205 529.435C17.1445 577.488 57.9596 339.654 9.9057 221.593C-38.1482 103.532 107.858 160.773 225.919 112.719Z"
+                    fill="url(#c)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="c"
+                      x1="82.7339"
+                      y1="550.792"
+                      x2="-39.945"
+                      y2="118.965"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop
+                        offset="0%"
+                        style="stop-color: var(--color-cyan-500)"
+                      />
+                      <stop
+                        offset="100%"
+                        style="stop-color: var(--color-purple-500)"
+                      />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+
+              <img
+                class="relative w-50 max-w-md mx-auto"
+                src="illustration.png"
+                alt=""
+                style="width: 80%;"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+     <!-- Career Container -->
+
+<style>
+    .header {
+  padding: 20px;
+  display: none;
+  text-align: center;
+  background: #1e1e1e;
+}
+
+.header h1 {
+  color: #d4a0ff;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #3a3a3a, #1e1e1e);
+}
+
+.hero h1 {
+  color: #d4a0ff;
+  font-size: 2.5em;
+}
+
+p {
+  margin: 20px auto;
+  max-width: 800px;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.search-box {
+  margin: 20px auto;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  display: none;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  background: #d4a0ff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-box button:hover {
+  background: #9d6dcf;
+}
+
+.careers-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.member-section {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.member-section h2 {
+  color: #d4a0ff;
+  margin-bottom: 10px;
+  font-size: 4rem;
+}
+
+.member-section p {
+  margin: 5px 0;
+}
+
+.join-button {
+  background: #d4a0ff;
+  color: #000;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.join-button:hover {
+  background: #9d6dcf;
+}
+
+</style>
+<div class="header">
+<h1>Join Aiemo as a Member</h1>
+<p>Are you a youth or student with a skill or product to offer? Join Aiemo and reach a wider audience while we help you grow your business.</p>
+</div>
+
+<div class="hero">
+<h1>Join Aiemo</h1>
+<p>Aiemo is India's first youth-driven digital platform, bridging the gap between service providers and customers. Whether you're a student with a unique skill or a budding entrepreneur with a product, Aiemo is here to help you thrive. We empower our members by providing a robust platform to showcase their services or products, ensuring they reach a wider audience. With Aiemo, you can be your own boss, work flexibly, and grow at your own pace. Our mission is to make youth-driven entrepreneurship accessible and successful for all.</p>
+<div class="search-box">
+  <input type="text" placeholder="Search services or products...">
+  <button>Search</button>
+</div>
+</div>
+
+<div class="careers-container">
+<div class="member-section">
+  <h2>Why Join Aiemo?</h2>
+  <p><strong>Be Your Own Boss:</strong> Whether you provide services like photography, IT, or home repairs, or sell unique products, Aiemo helps you connect with customers.</p>
+  <p><strong>Empower Youth:</strong> Aiemo is designed to support students and young entrepreneurs, helping them kickstart their journey.</p>
+  <p><strong>Earn with Flexibility:</strong> Set your own schedule and grow at your own pace while we take care of the platform support and marketing.</p>
+  <button class="join-button">Join Now</button>
+</div>
+</div>
+      <div class="contactContainer">
+        <!-- Contact Info Section -->
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+            <p><strong>Email:</strong>&nbsp;<a href="mailto:sunyataglobalventures@gmail.com">aiemoservices@gmail.com</a></p>
+            <p><strong>Address:</strong>&nbsp;Will be added soon</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Your Phone Number">
+                <textarea rows="5" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <style>
+      
+.cloneable {
+  padding: var(--container-padding);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  font-size: 1.1vw;
+}
+
+.overlay {
+  z-index: 2;
+  background-image: linear-gradient(90deg, var(--color-neutral-900) 85%, #0000);
+  justify-content: flex-start;
+  align-items: center;
+  width: 37.5em;
+  height: 100%;
+  padding-left: 2em;
+  display: flex;
+  position: absolute;
+  inset: 0% auto 0% 0%;
+}
+
+.overlay-inner {
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 28.125em;
+  display: flex;
+}
+
+.overlay-count-row {
+  grid-column-gap: .2em;
+  grid-row-gap: .2em;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: PP Neue Corp, Impact, sans-serif;
+  font-size: 5.625em;
+  font-weight: 700;
+  display: flex;
+}
+
+.count-column {
+  height: 1em;
+  overflow: hidden;
+}
+
+.count-heading {
+  width: 2ch;
+  font-size: 1em;
+  line-height: 1;
+  margin: 0px;
+}
+
+.count-row-divider {
+  background-color: var(--color-light);
+  width: 2px;
+  height: .75em;
+  transform: rotate(15deg);
+}
+
+.overlay-nav-row {
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+  display: flex;
+}
+
+.button {
+  background-color: #0000;
+  color: #fff;
+  border: 1px solid #fff3;
+  border-radius: .4em;
+  justify-content: center;
+  align-items: center;
+  width: 4em;
+  height: 4em;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+.button-arrow {
+  flex: none;
+  width: 1em;
+  height: .75em;
+}
+
+.button-arrow.next {
+  transform: rotate(180deg);
+}
+
+.button-overlay {
+  z-index: 2;
+  position: absolute;
+  inset: -1px;
+}
+
+.overlay-corner {
+  border-top: 1px solid var(--color-light);
+  border-left: 1px solid var(--color-light);
+  border-top-left-radius: .4em;
+  width: 1em;
+  height: 1em;
+}
+
+.overlay-corner.top-right {
+  position: absolute;
+  inset: 0% 0% auto auto;
+  transform: rotate(90deg);
+}
+
+.overlay-corner.bottom-left {
+  position: absolute;
+  inset: auto auto 0% 0%;
+  transform: rotate(-90deg);
+}
+
+.overlay-corner.bottom-right {
+  position: absolute;
+  inset: auto 0% 0% auto;
+  transform: rotate(180deg);
+}
+
+.button, .button-overlay{ transition: transform 0.475s var(--cubic-default), opacity 0.475s var(--cubic-default)}
+
+.button:hover .button-overlay{ transform: scale(1.4); }
+.overlay-nav-row:hover:has(.button:hover) .button{ opacity: 0.4; }
+.button:hover{ transform: scale(0.85); opacity: 1 !important; }
+
+.main {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+  overflow: hidden;
+}
+
+.slider-wrap {
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.slider-list {
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  display: flex;
+  position: relative;
+}
+
+.slider-slide {
+  flex: none;
+  width: 42.5em;
+  height: 28em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  transition: opacity .4s;
+  position: relative;
+}
+
+[data-slider="slide"]{ opacity: 0.2; }
+[data-slider="slide"].active { opacity: 1; } 
+[data-slider="slide"].active .slide-caption{ transition-delay:0.3s;} 
+
+.slide-inner {
+  border-radius: .5em;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+img{
+  width:100%;
+  height:100;
+  object-fit: cover;
+}
+
+.slide-caption {
+  z-index: 2;
+  grid-column-gap: .4em;
+  grid-row-gap: .4em;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  white-space: nowrap;
+  border-radius: .25em;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .4em .75em .4em .5em;
+  display: flex;
+  position: absolute;
+  top: 1.25em;
+  left: 1.25em;
+  overflow: hidden;
+}
+
+.caption-dot {
+  background-color: var(--color-dark);
+  border-radius: 10em;
+  flex: none;
+  width: .5em;
+  height: .5em;
+}
+
+.caption {
+  font-size: .75em;
+  font-family: arial;
+  margin: 0px;
+}
+
+.slide-caption{ transition: transform 0.525s var(--cubic-default), opacity 0.525s var(--cubic-default); transition-delay:0s; }
+
+html:not(.wf-design-mode) .slide-caption{ opacity: 0; transform:translate(-25%, 0px) }
+html:not(.wf-design-mode) [data-slider="slide"].active .slide-caption{ opacity: 1; transform:translate(0%, 0px) }
+
+
+@font-face {
+  font-family: 'PP Neue Corp';
+  src: url('https://cdn.prod.website-files.com/6717aac16c9ea22eeef1e79e/6717de2d56e40b921572d2d9_PPNeueCorp-TightUltrabold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.headingCon {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 100px;
+}
+    </style>
+    <div class="headingCon">
+      <h2>Showcasing</h2>
+    </div>
+    <section class="cloneable">
+        <div class="overlay">
+          <div class="overlay-inner">
+            <div class="overlay-count-row">
+              <div class="count-column">
+                <h2 data-slide-count="step" class="count-heading">01</h2>
+              </div>
+              <div class="count-row-divider"></div>
+              <div class="count-column">
+                <h2 data-slide-count="total" class="count-heading">04</h2>
+              </div>
+            </div>
+            <div class="overlay-nav-row"><button aria-label="previous slide" data-slider="button-prev" class="button"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 17 12" fill="none" class="button-arrow">
+                  <path d="M6.28871 12L7.53907 10.9111L3.48697 6.77778H16.5V5.22222H3.48697L7.53907 1.08889L6.28871 0L0.5 6L6.28871 12Z" fill="currentColor"></path>
+                </svg>
+                <div class="button-overlay">
+                  <div class="overlay-corner"></div>
+                  <div class="overlay-corner top-right"></div>
+                  <div class="overlay-corner bottom-left"></div>
+                  <div class="overlay-corner bottom-right"></div>
+                </div>
+              </button><button aria-label="previous slide" data-slider="button-next" class="button"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 17 12" fill="none" class="button-arrow next">
+                  <path d="M6.28871 12L7.53907 10.9111L3.48697 6.77778H16.5V5.22222H3.48697L7.53907 1.08889L6.28871 0L0.5 6L6.28871 12Z" fill="currentColor"></path>
+                </svg>
+                <div class="button-overlay">
+                  <div class="overlay-corner"></div>
+                  <div class="overlay-corner top-right"></div>
+                  <div class="overlay-corner bottom-left"></div>
+                  <div class="overlay-corner bottom-right"></div>
+                </div>
+              </button></div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="slider-wrap">
+            <div data-slider="list" class="slider-list">
+              <div data-slider="slide" class="slider-slide">
+                <div class="slide-inner"><img src="https://cdn.prod.website-files.com/674d847bf8e817966d307714/674d90f74ff2fe8b0b912b97_slide-1.avif" loading="lazy" sizes="(max-width: 479px) 100vw, 560px" alt="Abstract layout By FAKURIANDESIGN through Unsplash">
+                  <div class="slide-caption">
+                    <div class="caption-dot"></div>
+                    <p class="caption">Showcasing</p>
+                  </div>
+                </div>
+              </div>
+              <div data-slider="slide" class="slider-slide active">
+                <div class="slide-inner"><img src="https://images.pexels.com/photos/3843284/pexels-photo-3843284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" loading="lazy" alt="Abstract layout By FAKURIANDESIGN through Unsplash">
+                  <div class="slide-caption">
+                    <div class="caption-dot"></div>
+                    <p class="caption">Showcasing</p>
+                  </div>
+                </div>
+              </div>
+              <div data-slider="slide" class="slider-slide">
+                <div class="slide-inner"><img src="https://cdn.prod.website-files.com/674d847bf8e817966d307714/674d90f7f7cce73267703347_slide-3.avif" loading="lazy" sizes="(max-width: 479px) 100vw, 560px" alt="Abstract layout By FAKURIANDESIGN through Unsplash">
+                  <div class="slide-caption">
+                    <div class="caption-dot"></div>
+                    <p class="caption">Showcasing</p>
+                  </div>
+                </div>
+              </div>
+              <div data-slider="slide" class="slider-slide">
+                <div class="slide-inner"><img src="https://cdn.prod.website-files.com/674d847bf8e817966d307714/674d90f7ccfd203c82a46798_slide-4.avif" loading="lazy" sizes="(max-width: 479px) 100vw, 560px" alt="Abstract layout By FAKURIANDESIGN through Unsplash">
+                  <div class="slide-caption">
+                    <div class="caption-dot"></div>
+                    <p class="caption">Showcasing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-icon__item">
+            <a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Services</a>
+          </li>
+          <li class="menu__item"><a class="menu__link" href="careers.html">Careers</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+        </ul>
+        <p>&copy;2024 Aiemo Services | All Rights Reserved</p>
+      </footer>
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
+    </div>
+
+
+
+
+<script>
+  const target = document.getElementById('myEle123');
+
+// Create an observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Smoothly change background color
+      document.body.style.backgroundColor = '#f9f9f9';
+      document.body.style.color = 'black';
+      target.style.color = 'black';
+    } else {
+      // Smoothly reset background color
+      document.body.style.backgroundColor = 'black';
+      document.body.style.color = 'white';
+      target.style.color = 'white';
+    }
+  });
+}, { threshold: 0.2 }); // Trigger when 50% of the element is visible
+
+observer.observe(target);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+  
+  gsap.registerPlugin(Draggable, InertiaPlugin)
+  
+  function initSlider(){
+  
+    const wrapper = document.querySelector('[data-slider="list"]')  
+    const slides = gsap.utils.toArray('[data-slider="slide"]');
+    
+    const nextButton = document.querySelector('[data-slider="button-next"]')
+    const prevButton = document.querySelector('[data-slider="button-prev"]')
+    
+    const totalElement = document.querySelector('[data-slide-count="total"]');
+    const stepElement = document.querySelector('[data-slide-count="step"]');
+    const stepsParent = stepElement.parentElement;
+    
+    let activeElement;
+    const totalSlides = slides.length;
+  
+    // Update total slides text, prepend 0 if less than 10
+    totalElement.textContent = totalSlides < 10 ? `0${totalSlides}` : totalSlides;
+  
+    // Create step elements dynamically
+    stepsParent.innerHTML = ''; // Clear any existing steps
+    slides.forEach((_, index) => {
+      const stepClone = stepElement.cloneNode(true); // Clone the single step
+      stepClone.textContent = index + 1 < 10 ? `0${index + 1}` : index + 1;
+      stepsParent.appendChild(stepClone); // Append to the parent container
+    });
+  
+    // Dynamically generated steps
+    const allSteps = stepsParent.querySelectorAll('[data-slide-count="step"]');
+    
+    const loop = horizontalLoop(slides, {
+      paused: true, 
+      draggable: true, 
+      center: false,
+      onChange: (element, index) => { 
+        
+        // We add the active class to the 'next' element because our design is offset slightly.
+        activeElement && activeElement.classList.remove("active");
+        const nextSibling = element.nextElementSibling || slides[0]; 
+        nextSibling.classList.add("active");
+        activeElement = nextSibling;
+        
+        // Move the number to the correct spot
+        gsap.to(allSteps, { y: `${-100 * index}%`, ease: "power3", duration: 0.45 });
+      }
+    });
+    
+    // Similar to above, we substract 1 from our clicked index on click because our design is offset
+    slides.forEach((slide, i) => slide.addEventListener("click", () => loop.toIndex(i - 1, {ease:"power3",duration: 0.725})));
+    
+    nextButton.addEventListener("click", () => loop.next({ease:"power3", duration: 0.725}));
+    prevButton.addEventListener("click", () => loop.previous({ease:"power3", duration: 0.725}));
+  
+  }
+  
+  function horizontalLoop(items, config) {
+    let timeline;
+    items = gsap.utils.toArray(items);
+    config = config || {};
+    gsap.context(() => { 
+      let onChange = config.onChange,
+        lastIndex = 0,
+        tl = gsap.timeline({repeat: config.repeat, onUpdate: onChange && function() {
+            let i = tl.closestIndex();
+            if (lastIndex !== i) {
+              lastIndex = i;
+              onChange(items[i], i);
+            }
+          }, paused: config.paused, defaults: {ease: "none"}, onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)}),
+        length = items.length,
+        startX = items[0].offsetLeft,
+        times = [],
+        widths = [],
+        spaceBefore = [],
+        xPercents = [],
+        curIndex = 0,
+        indexIsDirty = false,
+        center = config.center,
+        pixelsPerSecond = (config.speed || 1) * 100,
+        snap = config.snap === false ? v => v : gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
+        timeOffset = 0,
+        container = center === true ? items[0].parentNode : gsap.utils.toArray(center)[0] || items[0].parentNode,
+        totalWidth,
+        getTotalWidth = () => items[length-1].offsetLeft + xPercents[length-1] / 100 * widths[length-1] - startX + spaceBefore[0] + items[length-1].offsetWidth * gsap.getProperty(items[length-1], "scaleX") + (parseFloat(config.paddingRight) || 0),
+        populateWidths = () => {
+          let b1 = container.getBoundingClientRect(), b2;
+          items.forEach((el, i) => {
+            widths[i] = parseFloat(gsap.getProperty(el, "width", "px"));
+            xPercents[i] = snap(parseFloat(gsap.getProperty(el, "x", "px")) / widths[i] * 100 + gsap.getProperty(el, "xPercent"));
+            b2 = el.getBoundingClientRect();
+            spaceBefore[i] = b2.left - (i ? b1.right : b1.left);
+            b1 = b2;
+          });
+          gsap.set(items, { // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
+            xPercent: i => xPercents[i]
+          });
+          totalWidth = getTotalWidth();
+        },
+        timeWrap,
+        populateOffsets = () => {
+          timeOffset = center ? tl.duration() * (container.offsetWidth / 2) / totalWidth : 0;
+          center && times.forEach((t, i) => {
+            times[i] = timeWrap(tl.labels["label" + i] + tl.duration() * widths[i] / 2 / totalWidth - timeOffset);
+          });
+        },
+        getClosest = (values, value, wrap) => {
+          let i = values.length,
+            closest = 1e10,
+            index = 0, d;
+          while (i--) {
+            d = Math.abs(values[i] - value);
+            if (d > wrap / 2) {
+              d = wrap - d;
+            }
+            if (d < closest) {
+              closest = d;
+              index = i;
+            }
+          }
+          return index;
+        },
+        populateTimeline = () => {
+          let i, item, curX, distanceToStart, distanceToLoop;
+          tl.clear();
+          for (i = 0; i < length; i++) {
+            item = items[i];
+            curX = xPercents[i] / 100 * widths[i];
+            distanceToStart = item.offsetLeft + curX - startX + spaceBefore[0];
+            distanceToLoop = distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
+            tl.to(item, {xPercent: snap((curX - distanceToLoop) / widths[i] * 100), duration: distanceToLoop / pixelsPerSecond}, 0)
+              .fromTo(item, {xPercent: snap((curX - distanceToLoop + totalWidth) / widths[i] * 100)}, {xPercent: xPercents[i], duration: (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond, immediateRender: false}, distanceToLoop / pixelsPerSecond)
+              .add("label" + i, distanceToStart / pixelsPerSecond);
+            times[i] = distanceToStart / pixelsPerSecond;
+          }
+          timeWrap = gsap.utils.wrap(0, tl.duration());
+        },
+        refresh = (deep) => {
+          let progress = tl.progress();
+          tl.progress(0, true);
+          populateWidths();
+          deep && populateTimeline();
+          populateOffsets();
+          deep && tl.draggable ? tl.time(times[curIndex], true) : tl.progress(progress, true);
+        },
+        onResize = () => refresh(true),
+        proxy;
+      gsap.set(items, {x: 0});
+      populateWidths();
+      populateTimeline();
+      populateOffsets();
+      window.addEventListener("resize", onResize);
+      function toIndex(index, vars) {
+        vars = vars || {};
+        (Math.abs(index - curIndex) > length / 2) && (index += index > curIndex ? -length : length); // always go in the shortest direction
+        let newIndex = gsap.utils.wrap(0, length, index),
+          time = times[newIndex];
+        if (time > tl.time() !== index > curIndex && index !== curIndex) { // if we're wrapping the timeline's playhead, make the proper adjustments
+          time += tl.duration() * (index > curIndex ? 1 : -1);
+        }
+        if (time < 0 || time > tl.duration()) {
+          vars.modifiers = {time: timeWrap};
+        }
+        curIndex = newIndex;
+        vars.overwrite = true;
+        gsap.killTweensOf(proxy);    
+        return vars.duration === 0 ? tl.time(timeWrap(time)) : tl.tweenTo(time, vars);
+      }
+      tl.toIndex = (index, vars) => toIndex(index, vars);
+      tl.closestIndex = setCurrent => {
+        let index = getClosest(times, tl.time(), tl.duration());
+        if (setCurrent) {
+          curIndex = index;
+          indexIsDirty = false;
+        }
+        return index;
+      };
+      tl.current = () => indexIsDirty ? tl.closestIndex(true) : curIndex;
+      tl.next = vars => toIndex(tl.current()+1, vars);
+      tl.previous = vars => toIndex(tl.current()-1, vars);
+      tl.times = times;
+      tl.progress(1, true).progress(0, true); // pre-render for performance
+      if (config.reversed) {
+        tl.vars.onReverseComplete();
+        tl.reverse();
+      }
+      if (config.draggable && typeof(Draggable) === "function") {
+        proxy = document.createElement("div")
+        let wrap = gsap.utils.wrap(0, 1),
+          ratio, startProgress, draggable, dragSnap, lastSnap, initChangeX, wasPlaying,
+          align = () => tl.progress(wrap(startProgress + (draggable.startX - draggable.x) * ratio)),
+          syncIndex = () => tl.closestIndex(true);
+        typeof(InertiaPlugin) === "undefined" && console.warn("InertiaPlugin required for momentum-based scrolling and snapping. https://greensock.com/club");
+        draggable = Draggable.create(proxy, {
+          trigger: items[0].parentNode,
+          type: "x",
+          onPressInit() {
+            let x = this.x;
+            gsap.killTweensOf(tl);
+            wasPlaying = !tl.paused();
+            tl.pause();
+            startProgress = tl.progress();
+            refresh();
+            ratio = 1 / totalWidth;
+            initChangeX = (startProgress / -ratio) - x;
+            gsap.set(proxy, {x: startProgress / -ratio});
+          },
+          onDrag: align,
+          onThrowUpdate: align,
+          overshootTolerance: 0,
+          inertia: true,
+          snap(value) {
+            if (Math.abs(startProgress / -ratio - this.x) < 10) {
+              return lastSnap + initChangeX
+            }
+            let time = -(value * ratio) * tl.duration(),
+              wrappedTime = timeWrap(time),
+              snapTime = times[getClosest(times, wrappedTime, tl.duration())],
+              dif = snapTime - wrappedTime;
+            Math.abs(dif) > tl.duration() / 2 && (dif += dif < 0 ? tl.duration() : -tl.duration());
+            lastSnap = (time + dif) / tl.duration() / -ratio;
+            return lastSnap;
+          },
+          onRelease() {
+            syncIndex();
+            draggable.isThrowing && (indexIsDirty = true);
+          },
+          onThrowComplete: () => {
+            syncIndex();
+            wasPlaying && tl.play();
+          }
+        })[0];
+        tl.draggable = draggable;
+      }
+      tl.closestIndex(true);
+      lastIndex = curIndex;
+      onChange && onChange(items[curIndex], curIndex);
+      timeline = tl;
+      return () => window.removeEventListener("resize", onResize); 
+    });
+    return timeline;
+  }
+    
+  initSlider()
+  
+  });
+  
+      </script>
+  </body>
+</html>

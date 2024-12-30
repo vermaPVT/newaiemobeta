@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+<div class="containsWhy">
+  <section class="faq-section">
+    <span><i class="fa-solid fa-question"></i></span>
+    <h2 class="faq-title">What is Aeimo?</h2>
+    <div class="arrowCtn">
+      <a href="/#faq"><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+  
+  <section class="faq-section">
+    <span><i class="fa-solid fa-person-shelter"></i></span>
+    <h2 class="faq-title">Who can benefit from Aeimo services?</h2>
+    <div class="arrowCtn">
+      <a href="/#faq"><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+  
+  <section class="faq-section">
+    <span><i class="fa-solid fa-chart-simple"></i></span>
+    <h2 class="faq-title">What makes Aeimo unique?</h2>
+    <div class="arrowCtn">
+      <a href="/#faq"><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+</div>
+<style>
+  /* General Styling for Dark Mode */
+body {
+  background-color: #121212; /* Dark background for the body */
+  color: #e0e0e0; /* Light text color */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.containsWhy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.arrowCtn {
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  margin-left: auto;
+  a {
+    color: #8a8a8a;
+  }
+}
+
+
+.faq-section {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #181818; /* Slightly lighter background for the section */
+  border-radius: 12px; /* Rounded corners for the section */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8); /* Outer shadow for the section */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+
+  span {
+    color: #8a2be2;
+    font-size: 1.8rem;
+  }
+}
+
+.faq-section:hover {
+  background-color: #282828;
+  transform: translateY(-5px);
+
+  .arrowCtn {
+    transform: rotate(90deg);
+  }
+}
+
+.faq-title {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+/* Styling for each FAQ item */
+.faq-item {
+  margin-bottom: 18px;
+}
+
+.faq-question {
+  display: block;
+  padding: 16px 24px;
+  background-color: #2a2a2a; /* Solid dark color for the question box */
+  color: #fff; /* White text for readability */
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Refined shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.faq-question:hover {
+  background-color: #3b3b3b; /* Slightly lighter background on hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8), 0 10px 24px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+.faq-question:active {
+  transform: scale(0.98); /* Slight scale-down on click */
+}
+
+/* Optional: Add media query for responsiveness */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 2em;
+  }
+
+  .faq-question {
+    font-size: 1em;
+    padding: 12px 16px;
+  }
+}
+
+</style>
